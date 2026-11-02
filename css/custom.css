@@ -1,0 +1,130 @@
+:root {
+  --shop-accent: #ffc107;
+  --shop-dark: #0b1d3a;
+  --shop-blue: #0d5bd7;
+  --shop-radius: 1rem;
+}
+
+body {
+  background-color: #f6f8fb;
+}
+
+.brand,
+.section-title,
+.hero__title {
+  font-family: "Russo One", system-ui, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.site-navbar .nav-link.active {
+  color: var(--shop-accent);
+}
+
+.section-title {
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3rem;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--shop-accent);
+}
+
+.text-center > .section-title::after,
+.section-title.text-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(13, 91, 215, 0.55), transparent 55%),
+    linear-gradient(135deg, var(--shop-dark) 0%, #13305f 100%);
+}
+
+.hero__stat {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero__media {
+  transform: rotate(1.5deg);
+}
+
+.feature {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(11, 29, 58, 0.08);
+}
+
+.feature__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.5rem;
+  height: 3.5rem;
+  padding: 0 0.75rem;
+  border-radius: 999px;
+  background-color: var(--bs-primary-bg-subtle);
+  color: var(--bs-primary-text-emphasis);
+  font-family: "Russo One", system-ui, sans-serif;
+  font-size: 1.1rem;
+}
+
+.product-card {
+  border: 0;
+  border-radius: var(--shop-radius);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1rem 2rem rgba(11, 29, 58, 0.12) !important;
+}
+
+.product-card__media {
+  background: linear-gradient(180deg, #eef3fb 0%, #ffffff 100%);
+}
+
+.product-card__img {
+  height: 220px;
+  padding: 1.5rem;
+  object-fit: contain;
+}
+
+.product-card__badge {
+  z-index: 1;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--shop-dark);
+}
+
+.price-old {
+  margin-left: 0.35rem;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--bs-secondary-color);
+}
+
+.site-footer .footer-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-footer .footer-link:hover {
+  color: #fff;
+}
