@@ -145,3 +145,116 @@ body {
 .accordion-button:not(.collapsed) {
   background-color: var(--bs-primary-bg-subtle);
 }
+
+.filter-panel {
+  border: 0;
+  border-radius: var(--shop-radius);
+}
+
+.promo-slide {
+  min-height: 300px;
+  color: #fff;
+}
+
+.promo-slide--red {
+  background: linear-gradient(120deg, #b02a37, #e35d6a);
+}
+
+.promo-slide--blue {
+  background: linear-gradient(120deg, #0a3d91, var(--shop-blue));
+}
+
+.promo-slide--dark {
+  background: linear-gradient(120deg, var(--shop-dark), #2b3f63);
+}
+
+.promo-slide__img {
+  max-height: 240px;
+  max-width: 100%;
+  filter: drop-shadow(0 0.75rem 1.5rem rgba(0, 0, 0, 0.35));
+}
+
+.promo-carousel .carousel-indicators {
+  margin-bottom: 0.75rem;
+}
+
+.promo-carousel .carousel-control-prev,
+.promo-carousel .carousel-control-next {
+  width: 3rem;
+}
+
+.step__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--shop-accent);
+  color: var(--shop-dark);
+  font-family: "Russo One", system-ui, sans-serif;
+  font-size: 1.25rem;
+}
+
+.cta {
+  background:
+    radial-gradient(circle at 10% 120%, rgba(255, 193, 7, 0.35), transparent 45%),
+    linear-gradient(120deg, var(--shop-blue), #0a3d91);
+}
+
+.order-summary {
+  top: 5.5rem;
+  border: 0;
+  border-radius: var(--shop-radius);
+  overflow: hidden;
+}
+
+.order-summary__img {
+  object-fit: contain;
+}
+
+.founder__img {
+  max-height: 180px;
+}
+
+.map-frame iframe {
+  border: 0;
+}
+
+.product-col.is-entering {
+  animation: card-in 0.25s ease both;
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero__media {
+    transform: none;
+  }
+
+  .promo-slide {
+    min-height: 260px;
+  }
+
+  .map-frame.ratio-21x9 {
+    --bs-aspect-ratio: 75%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feature,
+  .product-card,
+  .product-col.is-entering {
+    transition: none;
+    animation: none;
+  }
+}
