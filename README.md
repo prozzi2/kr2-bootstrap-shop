@@ -8,6 +8,10 @@
 
 КР №2 — отдельная реализация той же предметной области, что и в КР №1 ([kr1-html-css-shop](https://github.com/prozzi2/kr1-html-css-shop)), но интерфейс построен на CSS-фреймворке, а не на собственном CSS.
 
+## Опубликованная версия
+
+GitHub Pages: https://prozzi2.github.io/kr2-bootstrap-shop/
+
 ## Используемый фреймворк
 
 Bootstrap 5.3.8 (CSS + JS Bundle). Шрифт заголовков — Russo One (Google Fonts).
@@ -97,7 +101,7 @@ kr2-bootstrap-shop/
 
 ## Как проверить проект
 
-1. Открыть `index.html`.
+1. Открыть `index.html` (или ссылку GitHub Pages).
 2. В DevTools включить мобильный режим (375 px) — меню сворачивается в кнопку и раскрывается.
 3. На главной: карусель листается, «Быстрая заявка» открывает модальное окно.
 4. В каталоге: изменить фильтры и сортировку, перейти на 2-ю страницу; ввести в поиск несуществующее название — появится `alert`.
@@ -106,6 +110,16 @@ kr2-bootstrap-shop/
 7. На `order.html?product=1` изменить количество и доставку — пересчитывается итог; отправить форму.
 
 Формы учебные: данные проверяются в браузере и не отправляются на сервер.
+
+## Ветки и Pull Request
+
+| Ветка | Что сделано |
+|---|---|
+| `feature/bootstrap-grid-page` | ПР №9: проект, подключение Bootstrap, главная на сетке |
+| `feature/bootstrap-components` | ПР №10: catalog, product, order, navbar, card, badge, alert, modal, формы, accordion |
+| `feature/kr2-improvements` | самостоятельные доработки: contacts, фильтры, toast, carousel, tabs, pagination |
+| `feature/local-bootstrap` | локальное подключение Bootstrap из `vendor/` |
+| `fix/kr2-final-check` | ПР №11: финальная проверка и README |
 
 ## Автор
 
