@@ -36,6 +36,7 @@
           </li>
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="product.html">Товар дня</a></li>
           <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
           <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
             <button type="button" class="btn btn-primary btn-sm px-3" data-bs-toggle="modal" data-bs-target="#orderModal">Быстрая заявка</button>
           </li>
@@ -47,7 +48,13 @@
 
   <main class="flex-grow-1" id="productPage">
     <div class="container mt-4">
-      <a href="catalog.html" class="btn btn-link px-0">← Назад в каталог</a>
+      <nav aria-label="Хлебные крошки">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
+          <li class="breadcrumb-item active" aria-current="page" data-field="crumb">Рука «Титан» — правая мужская</li>
+        </ol>
+      </nav>
     </div>
 
     <section class="container mb-5">
@@ -72,19 +79,6 @@
             <s class="price-old fs-5 d-none" data-field="old"></s>
           </p>
 
-          <h2 class="h5">Описание</h2>
-          <p>Флагман магазина. «Титан» создан для тех, кто выходит к столу за победой: усиленное предплечье, мёртвый хват и запас прочности на целый турнирный сезон. Подходит для борьбы правой рукой в любой весовой категории.</p>
-          <h2 class="h5">Характеристики</h2>
-          <table class="table table-sm table-striped mb-4">
-            <tbody>
-              <tr><th scope="row">Сторона</th><td>Правая</td></tr>
-              <tr><th scope="row">Пол</th><td>Мужская</td></tr>
-              <tr><th scope="row">Назначение</th><td>Для армрестлинга</td></tr>
-              <tr><th scope="row">Сила хвата</th><td>120 кг</td></tr>
-              <tr><th scope="row">Вес</th><td>4,8 кг</td></tr>
-              <tr><th scope="row">Гарантия</th><td>2 турнирных сезона</td></tr>
-            </tbody>
-          </table>
           <div class="d-grid d-sm-flex gap-2 mb-4">
             <a href="order.html?product=1" class="btn btn-primary btn-lg px-4" data-field="orderLink">Оформить заявку</a>
             <button type="button" class="btn btn-outline-primary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="1" data-field="quickBtn">Быстрая заявка</button>
@@ -92,6 +86,56 @@
 
           <div class="alert alert-secondary small mb-0" role="note" data-field="note">
             Примерка в зале у метро «Проспект Вернадского» — бесплатно. Доставка к турниру за 1–3 дня.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mb-5" aria-label="Подробная информация о товаре">
+      <ul class="nav nav-tabs" id="productTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="desc-tab" data-bs-toggle="tab" data-bs-target="#desc-pane" type="button" role="tab" aria-controls="desc-pane" aria-selected="true">Описание</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs-pane" type="button" role="tab" aria-controls="specs-pane" aria-selected="false">Характеристики</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="delivery-tab" data-bs-toggle="tab" data-bs-target="#delivery-pane" type="button" role="tab" aria-controls="delivery-pane" aria-selected="false">Доставка</button>
+        </li>
+      </ul>
+      <div class="tab-content border border-top-0 rounded-bottom-4 p-4">
+        <div class="tab-pane fade show active" id="desc-pane" role="tabpanel" aria-labelledby="desc-tab" tabindex="0">
+          <p class="mb-0" data-field="desc">Флагман магазина. «Титан» создан для тех, кто выходит к столу за победой: усиленное предплечье, мёртвый хват и запас прочности на целый турнирный сезон. Подходит для борьбы правой рукой в любой весовой категории.</p>
+        </div>
+        <div class="tab-pane fade" id="specs-pane" role="tabpanel" aria-labelledby="specs-tab" tabindex="0">
+          <div class="table-responsive">
+            <table class="table table-striped mb-0">
+              <tbody data-field="specs">
+                <tr><th scope="row">Сторона</th><td>Правая</td></tr>
+                <tr><th scope="row">Пол</th><td>Мужская</td></tr>
+                <tr><th scope="row">Назначение</th><td>Для армрестлинга</td></tr>
+                <tr><th scope="row">Сила хвата</th><td>120 кг</td></tr>
+                <tr><th scope="row">Вес</th><td>4,8 кг</td></tr>
+                <tr><th scope="row">Техника</th><td>верх, крюк, трицепс</td></tr>
+                <tr><th scope="row">Гарантия</th><td>2 турнирных сезона</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="delivery-pane" role="tabpanel" aria-labelledby="delivery-tab" tabindex="0">
+          <div class="row g-3">
+            <div class="col-12 col-md-4">
+              <h3 class="h6">Самовывоз</h3>
+              <p class="small text-body-secondary mb-0">Бесплатно, из зала у метро «Проспект Вернадского».</p>
+            </div>
+            <div class="col-12 col-md-4">
+              <h3 class="h6">Курьер по Москве</h3>
+              <p class="small text-body-secondary mb-0">500 ₽, бесплатно от 30 000 ₽. 1–2 дня.</p>
+            </div>
+            <div class="col-12 col-md-4">
+              <h3 class="h6">Почта России</h3>
+              <p class="small text-body-secondary mb-0">900 ₽, от 3 до 7 дней в зависимости от региона.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -126,6 +170,11 @@
         </div>
       </div>
     </section>
+
+    <section class="container mb-5" aria-labelledby="related-title">
+      <h2 id="related-title" class="section-title h3 mb-3">Похожие товары</h2>
+      <div class="row g-4" id="relatedGrid"></div>
+    </section>
   </main>
 
   <footer class="site-footer bg-dark text-white-50 pt-5 pb-4 mt-5">
@@ -151,6 +200,7 @@
           <ul class="list-unstyled small mb-0">
             <li class="mb-2"><a class="footer-link" href="catalog.html?category=sport">Для армрестлинга</a></li>
             <li class="mb-2"><a class="footer-link" href="catalog.html?category=daily">Для быта</a></li>
+            <li><a class="footer-link" href="contacts.html">Контакты</a></li>
           </ul>
         </div>
         <div class="col-12 col-lg-4">
@@ -173,7 +223,7 @@
   <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <form id="quickOrderForm" action="#" method="post">
+        <form id="quickOrderForm" class="needs-validation" action="#" method="post" novalidate>
           <div class="modal-header">
             <h2 class="modal-title fs-5" id="orderModalLabel">Быстрая заявка</h2>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
@@ -183,12 +233,14 @@
             <div class="mb-3">
               <label for="quick-name" class="form-label">Имя</label>
               <input id="quick-name" name="name" type="text" class="form-control" placeholder="Как к вам обращаться" minlength="2" autocomplete="given-name" required>
+              <div class="invalid-feedback">Введите имя (минимум 2 символа).</div>
             </div>
             <div class="mb-3">
               <label for="quick-phone" class="form-label">Телефон</label>
               <div class="input-group has-validation">
                 <span class="input-group-text">+7</span>
                 <input id="quick-phone" name="phone" type="tel" inputmode="numeric" class="form-control" placeholder="9001234567" pattern="[0-9]{10}" autocomplete="tel-national" required>
+                <div class="invalid-feedback">Введите 10 цифр номера без +7.</div>
               </div>
             </div>
             <div class="mb-3">
@@ -204,10 +256,12 @@
                 <option value="7" data-price="9000">Рука «Грация» — правая женская — 9 000 ₽</option>
                 <option value="8" data-price="8100">Рука «Грация» — левая женская — 8 100 ₽</option>
               </select>
+              <div class="invalid-feedback">Выберите товар.</div>
             </div>
             <div class="form-check">
               <input id="quick-agree" name="agreement" type="checkbox" class="form-check-input" required>
               <label for="quick-agree" class="form-check-label">Согласен на обработку персональных данных</label>
+              <div class="invalid-feedback">Без согласия заявку отправить нельзя.</div>
             </div>
           </div>
           <div class="modal-footer">
@@ -219,6 +273,19 @@
     </div>
   </div>
 
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="appToast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-header">
+        <img src="images/logo.png" class="rounded me-2" alt="" width="20" height="20">
+        <strong class="me-auto">Shop_ot_bob</strong>
+        <small>только что</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+      </div>
+      <div class="toast-body" id="appToastBody">Готово!</div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
