@@ -12,13 +12,16 @@ Bootstrap 5.3.8.
 
 ## Способ подключения
 
-Bootstrap подключён через CDN (jsDelivr). Собственный файл `css/custom.css` подключается после Bootstrap.
+Bootstrap подключён через CDN (jsDelivr): CSS в `<head>`, JS Bundle перед `</body>`. Собственный файл `css/custom.css` подключается после Bootstrap.
 
 ## Структура проекта
 
 ```
 kr2-bootstrap-shop/
-├── index.html
+├── index.html      главная
+├── catalog.html    каталог товаров
+├── product.html    карточка товара
+├── order.html      форма заявки
 ├── css/
 │   └── custom.css
 ├── images/
@@ -26,14 +29,16 @@ kr2-bootstrap-shop/
 └── .gitignore
 ```
 
-## Что реализовано (практическая работа №9)
+## Реализованные компоненты
 
-- главная страница `index.html` на Bootstrap-сетке;
-- `container`, `container-fluid`, `row`, `col-12`, `col-md-*`, `col-lg-*`;
-- отступы между колонками через `g-3`, `g-4`, `g-5`;
-- навигация `navbar`;
-- hero-блок, блок преимуществ, сетка популярных товаров, подвал;
-- utility-классы для отступов, цветов и выравнивания.
+- `navbar` с выпадающим меню каталога;
+- `card` — карточки товаров;
+- `btn` — `btn-primary`, `btn-outline-primary`, `btn-warning` и др.;
+- `badge` — «Хит», «Новинка», «Скидка», «Под заказ»;
+- `alert` — подсказки пользователю;
+- `modal` — быстрая заявка;
+- `form-control`, `form-select`, `input-group`, `form-check`;
+- `accordion` — частые вопросы на странице товара.
 
 ## Автор
 

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рука «Титан» — правая мужская — Shop_ot_bob</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm site-navbar" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 brand" href="index.html">
+          <img src="images/logo.png" alt="" width="36" height="36" class="rounded-2">
+          Shop_ot_bob
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="catalog.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Каталог</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="catalog.html">Все товары</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="catalog.html?category=sport">Для армрестлинга</a></li>
+              <li><a class="dropdown-item" href="catalog.html?category=daily">Для быта</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="product.html">Товар дня</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <button type="button" class="btn btn-primary btn-sm px-3" data-bs-toggle="modal" data-bs-target="#orderModal">Быстрая заявка</button>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-grow-1" id="productPage">
+    <div class="container mt-4">
+      <a href="catalog.html" class="btn btn-link px-0">← Назад в каталог</a>
+    </div>
+
+    <section class="container mb-5">
+      <div class="row g-4 g-lg-5 align-items-start">
+        <div class="col-12 col-lg-6">
+          <div class="product-gallery position-relative rounded-4 border p-4 p-lg-5 text-center">
+            <span class="badge text-bg-danger position-absolute top-0 start-0 m-3" data-field="badge">Хит</span>
+            <img src="images/pravaya_ruka.png" class="img-fluid product-gallery__img" alt="Рука «Титан» — правая мужская" data-field="image">
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge rounded-pill text-bg-success" data-field="stock">В наличии</span>
+            <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis" data-field="category">Для армрестлинга</span>
+            <span class="badge rounded-pill text-bg-light border" data-field="side">Правая</span>
+          </div>
+          <h1 class="h2 fw-bold mb-3" data-field="name">Рука «Титан» — правая мужская</h1>
+          <p class="lead text-body-secondary" data-field="short">Крепкая мужская рука для армрестлинга. Позволяет играючи бороть всех студентов вашего потока.</p>
+          <p class="price fs-2 mb-4">
+            <span data-field="price">32&nbsp;000&nbsp;₽</span>
+            <s class="price-old fs-5 d-none" data-field="old"></s>
+          </p>
+
+          <h2 class="h5">Описание</h2>
+          <p>Флагман магазина. «Титан» создан для тех, кто выходит к столу за победой: усиленное предплечье, мёртвый хват и запас прочности на целый турнирный сезон. Подходит для борьбы правой рукой в любой весовой категории.</p>
+          <h2 class="h5">Характеристики</h2>
+          <table class="table table-sm table-striped mb-4">
+            <tbody>
+              <tr><th scope="row">Сторона</th><td>Правая</td></tr>
+              <tr><th scope="row">Пол</th><td>Мужская</td></tr>
+              <tr><th scope="row">Назначение</th><td>Для армрестлинга</td></tr>
+              <tr><th scope="row">Сила хвата</th><td>120 кг</td></tr>
+              <tr><th scope="row">Вес</th><td>4,8 кг</td></tr>
+              <tr><th scope="row">Гарантия</th><td>2 турнирных сезона</td></tr>
+            </tbody>
+          </table>
+          <div class="d-grid d-sm-flex gap-2 mb-4">
+            <a href="order.html?product=1" class="btn btn-primary btn-lg px-4" data-field="orderLink">Оформить заявку</a>
+            <button type="button" class="btn btn-outline-primary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="1" data-field="quickBtn">Быстрая заявка</button>
+          </div>
+
+          <div class="alert alert-secondary small mb-0" role="note" data-field="note">
+            Примерка в зале у метро «Проспект Вернадского» — бесплатно. Доставка к турниру за 1–3 дня.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mb-5" aria-labelledby="faq-title">
+      <h2 id="faq-title" class="section-title h3 mb-3">Частые вопросы</h2>
+      <div class="accordion" id="productFaq">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" aria-expanded="true" aria-controls="faq-1">Как подобрать руку под свою технику?</button>
+          </h3>
+          <div id="faq-1" class="accordion-collapse collapse show" data-bs-parent="#productFaq">
+            <div class="accordion-body">Если вы борете верхом — берите модель с цепкой кистью («Валькирия»). Для крюка и трицепса нужен запас силы хвата — подойдёт «Титан». Не уверены — приходите на бесплатную примерку.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" aria-expanded="false" aria-controls="faq-2">Можно ли вернуть товар?</button>
+          </h3>
+          <div id="faq-2" class="accordion-collapse collapse" data-bs-parent="#productFaq">
+            <div class="accordion-body">Да, в течение 14 дней, если рука не участвовала в официальных турнирах и сохранила товарный вид.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" aria-expanded="false" aria-controls="faq-3">Подходят ли бытовые модели для армрестлинга?</button>
+          </h3>
+          <div id="faq-3" class="accordion-collapse collapse" data-bs-parent="#productFaq">
+            <div class="accordion-body">Нет. Модели «Будни» и «Грация» созданы для повседневных задач. За столом они сдаются первыми — честно предупреждаем.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer bg-dark text-white-50 pt-5 pb-4 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="d-inline-flex align-items-center gap-2 text-white text-decoration-none brand fs-5 mb-2" href="index.html">
+            <img src="images/logo.png" alt="" width="32" height="32" class="rounded-2">
+            Shop_ot_bob
+          </a>
+          <p class="small mb-0">Учебный интернет-магазин рук для армрестлинга и повседневной жизни. Поборитесь с нами уже нормально!</p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h2 class="h6 text-white text-uppercase mb-3">Магазин</h2>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a class="footer-link" href="catalog.html">Каталог</a></li>
+            <li class="mb-2"><a class="footer-link" href="product.html">Товар дня</a></li>
+            <li><a class="footer-link" href="order.html">Заявка</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h2 class="h6 text-white text-uppercase mb-3">Покупателям</h2>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a class="footer-link" href="catalog.html?category=sport">Для армрестлинга</a></li>
+            <li class="mb-2"><a class="footer-link" href="catalog.html?category=daily">Для быта</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-4">
+          <h2 class="h6 text-white text-uppercase mb-3">Контакты</h2>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2">Москва, м. «Проспект Вернадского»</li>
+            <li class="mb-2"><a class="footer-link" href="tel:+79000000000">+7 (900) 000-00-00</a></li>
+            <li><a class="footer-link" href="mailto:shop@example.com">shop@example.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between gap-2 small">
+        <span>&copy; 2026 Shop_ot_bob. Контрольная работа №2, дисциплина «Фронтенд и бэкенд разработка».</span>
+        <span>Исмаилов Полад Вели оглы, ЭФБО-04-25</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form id="quickOrderForm" action="#" method="post">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="orderModalLabel">Быстрая заявка</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-body-secondary small">Оставьте контакты — перезвоним в течение дня и уточним размер хвата.</p>
+            <div class="mb-3">
+              <label for="quick-name" class="form-label">Имя</label>
+              <input id="quick-name" name="name" type="text" class="form-control" placeholder="Как к вам обращаться" minlength="2" autocomplete="given-name" required>
+            </div>
+            <div class="mb-3">
+              <label for="quick-phone" class="form-label">Телефон</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">+7</span>
+                <input id="quick-phone" name="phone" type="tel" inputmode="numeric" class="form-control" placeholder="9001234567" pattern="[0-9]{10}" autocomplete="tel-national" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="quick-product" class="form-label">Товар</label>
+              <select id="quick-product" name="product" class="form-select" required>
+                <option value="" selected disabled>Выберите товар</option>
+                <option value="1" data-price="32000">Рука «Титан» — правая мужская — 32 000 ₽</option>
+                <option value="2" data-price="31000">Рука «Титан» — левая мужская — 31 000 ₽</option>
+                <option value="3" data-price="21000">Рука «Валькирия» — правая женская — 21 000 ₽</option>
+                <option value="4" data-price="20500">Рука «Валькирия» — левая женская — 20 500 ₽</option>
+                <option value="5" data-price="10000">Рука «Будни» — правая мужская — 10 000 ₽</option>
+                <option value="6" data-price="10000">Рука «Будни» — левая мужская — 10 000 ₽</option>
+                <option value="7" data-price="9000">Рука «Грация» — правая женская — 9 000 ₽</option>
+                <option value="8" data-price="8100">Рука «Грация» — левая женская — 8 100 ₽</option>
+              </select>
+            </div>
+            <div class="form-check">
+              <input id="quick-agree" name="agreement" type="checkbox" class="form-check-input" required>
+              <label for="quick-agree" class="form-check-label">Согласен на обработку персональных данных</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+            <button type="submit" class="btn btn-primary">Отправить заявку</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
