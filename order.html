@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заявка — Shop_ot_bob</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm site-navbar" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 brand" href="index.html">
+          <img src="images/logo.png" alt="" width="36" height="36" class="rounded-2">
+          Shop_ot_bob
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="catalog.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Каталог</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="catalog.html">Все товары</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="catalog.html?category=sport">Для армрестлинга</a></li>
+              <li><a class="dropdown-item" href="catalog.html?category=daily">Для быта</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Товар дня</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="order.html">Заявка</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <button type="button" class="btn btn-primary btn-sm px-3" data-bs-toggle="modal" data-bs-target="#orderModal">Быстрая заявка</button>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-grow-1">
+    <section class="page-head bg-body-tertiary border-bottom py-4 py-lg-5">
+      <div class="container">
+        <h1 class="section-title display-6 mb-2">Оформление заявки</h1>
+        <p class="text-body-secondary mb-0">Заполните форму — менеджер перезвонит, подтвердит наличие и согласует доставку.</p>
+      </div>
+    </section>
+
+    <section class="container my-4 my-lg-5">
+      <div class="row g-4 g-lg-5">
+        <div class="col-12 col-lg-8">
+          <div class="alert alert-info" role="alert">
+            Учебная форма: данные проверяются в браузере и не отправляются на сервер.
+          </div>
+
+          <form id="orderForm" class="card card-body shadow-sm p-4" action="#" method="post">
+            <h2 class="h5 mb-3">Контактные данные</h2>
+            <div class="row g-3 mb-4">
+              <div class="col-12 col-md-6">
+                <label for="order-name" class="form-label">Имя <span class="text-danger">*</span></label>
+                <input id="order-name" name="name" type="text" class="form-control" placeholder="Полад" minlength="2" autocomplete="given-name" required>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="order-email" class="form-label">E-mail <span class="text-danger">*</span></label>
+                <input id="order-email" name="email" type="email" class="form-control" placeholder="example@mail.ru" autocomplete="email" required>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="order-phone" class="form-label">Телефон <span class="text-danger">*</span></label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text">+7</span>
+                  <input id="order-phone" name="phone" type="tel" inputmode="numeric" class="form-control" placeholder="9001234567" pattern="[0-9]{10}" autocomplete="tel-national" required>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="order-date" class="form-label">Удобная дата звонка</label>
+                <input id="order-date" name="date" type="date" class="form-control">
+              </div>
+            </div>
+
+            <h2 class="h5 mb-3">Товар</h2>
+            <div class="row g-3 mb-4">
+              <div class="col-12">
+                <label for="order-product" class="form-label">Выбранный товар <span class="text-danger">*</span></label>
+                <select id="order-product" name="product" class="form-select" required>
+                  <option value="" selected disabled>Выберите товар</option>
+                  <option value="1" data-price="32000">Рука «Титан» — правая мужская — 32 000 ₽</option>
+                  <option value="2" data-price="31000">Рука «Титан» — левая мужская — 31 000 ₽</option>
+                  <option value="3" data-price="21000">Рука «Валькирия» — правая женская — 21 000 ₽</option>
+                  <option value="4" data-price="20500">Рука «Валькирия» — левая женская — 20 500 ₽</option>
+                  <option value="5" data-price="10000">Рука «Будни» — правая мужская — 10 000 ₽</option>
+                  <option value="6" data-price="10000">Рука «Будни» — левая мужская — 10 000 ₽</option>
+                  <option value="7" data-price="9000">Рука «Грация» — правая женская — 9 000 ₽</option>
+                  <option value="8" data-price="8100">Рука «Грация» — левая женская — 8 100 ₽</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="order-qty" class="form-label">Количество</label>
+                <div class="input-group">
+                  <input id="order-qty" name="quantity" type="number" class="form-control text-center" value="1" min="1" max="10" required>
+                  <span class="input-group-text">шт.</span>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="order-weight" class="form-label">Весовая категория</label>
+                <select id="order-weight" name="weight" class="form-select">
+                  <option value="" selected>Не важно</option>
+                  <option value="60">до 60 кг</option>
+                  <option value="70">до 70 кг</option>
+                  <option value="80">до 80 кг</option>
+                  <option value="90">до 90 кг</option>
+                  <option value="90+">свыше 90 кг</option>
+                </select>
+              </div>
+            </div>
+
+            <h2 class="h5 mb-3">Доставка</h2>
+            <div class="mb-4">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="delivery" id="delivery-pickup" value="pickup" data-cost="0" checked>
+                <label class="form-check-label" for="delivery-pickup">Самовывоз из зала — бесплатно</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="delivery" id="delivery-courier" value="courier" data-cost="500">
+                <label class="form-check-label" for="delivery-courier">Курьер по Москве — 500 ₽ (бесплатно от 30 000 ₽)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="delivery" id="delivery-post" value="post" data-cost="900">
+                <label class="form-check-label" for="delivery-post">Почта России — 900 ₽</label>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label for="order-comment" class="form-label">Комментарий</label>
+              <textarea id="order-comment" name="comment" class="form-control" rows="4" placeholder="Например: борю правой, техника — верх"></textarea>
+            </div>
+
+            <div class="form-check mb-2">
+              <input id="order-agreement" name="agreement" type="checkbox" class="form-check-input" required>
+              <label for="order-agreement" class="form-check-label">Согласен на обработку персональных данных <span class="text-danger">*</span></label>
+            </div>
+            <div class="mb-4"></div>
+
+            <div class="d-grid d-sm-flex gap-2">
+              <button type="submit" class="btn btn-primary btn-lg px-4">Отправить заявку</button>
+              <button type="reset" class="btn btn-outline-secondary btn-lg px-4">Очистить</button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="col-12 col-lg-4">
+          <div class="card shadow-sm">
+            <div class="card-header bg-dark text-white fw-semibold">Как это работает</div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">1. Вы оставляете заявку</li>
+              <li class="list-group-item">2. Мы перезваниваем в течение дня</li>
+              <li class="list-group-item">3. Согласуем примерку и доставку</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer bg-dark text-white-50 pt-5 pb-4 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="d-inline-flex align-items-center gap-2 text-white text-decoration-none brand fs-5 mb-2" href="index.html">
+            <img src="images/logo.png" alt="" width="32" height="32" class="rounded-2">
+            Shop_ot_bob
+          </a>
+          <p class="small mb-0">Учебный интернет-магазин рук для армрестлинга и повседневной жизни. Поборитесь с нами уже нормально!</p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h2 class="h6 text-white text-uppercase mb-3">Магазин</h2>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a class="footer-link" href="catalog.html">Каталог</a></li>
+            <li class="mb-2"><a class="footer-link" href="product.html">Товар дня</a></li>
+            <li><a class="footer-link" href="order.html">Заявка</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h2 class="h6 text-white text-uppercase mb-3">Покупателям</h2>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a class="footer-link" href="catalog.html?category=sport">Для армрестлинга</a></li>
+            <li class="mb-2"><a class="footer-link" href="catalog.html?category=daily">Для быта</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-4">
+          <h2 class="h6 text-white text-uppercase mb-3">Контакты</h2>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2">Москва, м. «Проспект Вернадского»</li>
+            <li class="mb-2"><a class="footer-link" href="tel:+79000000000">+7 (900) 000-00-00</a></li>
+            <li><a class="footer-link" href="mailto:shop@example.com">shop@example.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between gap-2 small">
+        <span>&copy; 2026 Shop_ot_bob. Контрольная работа №2, дисциплина «Фронтенд и бэкенд разработка».</span>
+        <span>Исмаилов Полад Вели оглы, ЭФБО-04-25</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form id="quickOrderForm" action="#" method="post">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="orderModalLabel">Быстрая заявка</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-body-secondary small">Оставьте контакты — перезвоним в течение дня и уточним размер хвата.</p>
+            <div class="mb-3">
+              <label for="quick-name" class="form-label">Имя</label>
+              <input id="quick-name" name="name" type="text" class="form-control" placeholder="Как к вам обращаться" minlength="2" autocomplete="given-name" required>
+            </div>
+            <div class="mb-3">
+              <label for="quick-phone" class="form-label">Телефон</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">+7</span>
+                <input id="quick-phone" name="phone" type="tel" inputmode="numeric" class="form-control" placeholder="9001234567" pattern="[0-9]{10}" autocomplete="tel-national" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="quick-product" class="form-label">Товар</label>
+              <select id="quick-product" name="product" class="form-select" required>
+                <option value="" selected disabled>Выберите товар</option>
+                <option value="1" data-price="32000">Рука «Титан» — правая мужская — 32 000 ₽</option>
+                <option value="2" data-price="31000">Рука «Титан» — левая мужская — 31 000 ₽</option>
+                <option value="3" data-price="21000">Рука «Валькирия» — правая женская — 21 000 ₽</option>
+                <option value="4" data-price="20500">Рука «Валькирия» — левая женская — 20 500 ₽</option>
+                <option value="5" data-price="10000">Рука «Будни» — правая мужская — 10 000 ₽</option>
+                <option value="6" data-price="10000">Рука «Будни» — левая мужская — 10 000 ₽</option>
+                <option value="7" data-price="9000">Рука «Грация» — правая женская — 9 000 ₽</option>
+                <option value="8" data-price="8100">Рука «Грация» — левая женская — 8 100 ₽</option>
+              </select>
+            </div>
+            <div class="form-check">
+              <input id="quick-agree" name="agreement" type="checkbox" class="form-check-input" required>
+              <label for="quick-agree" class="form-check-label">Согласен на обработку персональных данных</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+            <button type="submit" class="btn btn-primary">Отправить заявку</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
