@@ -36,6 +36,7 @@
           </li>
           <li class="nav-item"><a class="nav-link" href="product.html">Товар дня</a></li>
           <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
           <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
             <button type="button" class="btn btn-primary btn-sm px-3" data-bs-toggle="modal" data-bs-target="#orderModal">Быстрая заявка</button>
           </li>
@@ -84,6 +85,66 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="container my-5" aria-labelledby="promo-title">
+      <h2 id="promo-title" class="visually-hidden">Акции магазина</h2>
+      <div id="promoCarousel" class="carousel slide promo-carousel rounded-4 overflow-hidden shadow-sm" data-bs-ride="carousel" data-bs-interval="6000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Акция 1"></button>
+          <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="1" aria-label="Акция 2"></button>
+          <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="2" aria-label="Акция 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active promo-slide promo-slide--red">
+            <div class="row g-0 align-items-center h-100">
+              <div class="col-12 col-md-7 px-5 pt-4 pb-5 p-lg-5">
+                <span class="badge text-bg-light mb-2">Скидка −15%</span>
+                <h3 class="h2 fw-bold">«Валькирия» левая за 20 500 ₽</h3>
+                <p class="mb-4 opacity-75">Борьба на обе руки стала доступнее. Предложение действует до конца сезона.</p>
+                <a href="product.html?id=4" class="btn btn-light">Смотреть товар</a>
+              </div>
+              <div class="col-md-5 d-none d-md-block text-center p-4">
+                <img src="images/lev_zhenskaya_ruka.png" class="promo-slide__img" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item promo-slide promo-slide--blue">
+            <div class="row g-0 align-items-center h-100">
+              <div class="col-12 col-md-7 px-5 pt-4 pb-5 p-lg-5">
+                <span class="badge text-bg-success mb-2">Новинка</span>
+                <h3 class="h2 fw-bold">«Титан» теперь и для левой руки</h3>
+                <p class="mb-4 opacity-75">Зеркальная версия флагмана с хватом 115 кг для левосторонней борьбы.</p>
+                <a href="product.html?id=2" class="btn btn-light">Смотреть товар</a>
+              </div>
+              <div class="col-md-5 d-none d-md-block text-center p-4">
+                <img src="images/levaya_ruka.png" class="promo-slide__img" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item promo-slide promo-slide--dark">
+            <div class="row g-0 align-items-center h-100">
+              <div class="col-12 col-md-7 px-5 pt-4 pb-5 p-lg-5">
+                <span class="badge text-bg-warning mb-2">Доставка</span>
+                <h3 class="h2 fw-bold">Бесплатная доставка от 30 000 ₽</h3>
+                <p class="mb-4 opacity-75">Курьером по Москве или самовывозом у метро «Проспект Вернадского».</p>
+                <a href="order.html" class="btn btn-light">Оформить заявку</a>
+              </div>
+              <div class="col-md-5 d-none d-md-block text-center p-4">
+                <img src="images/pravaya_ruka.png" class="promo-slide__img" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Предыдущая акция</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Следующая акция</span>
+        </button>
       </div>
     </section>
 
@@ -207,6 +268,46 @@
       </div>
     </section>
 
+    <section class="container my-5" aria-labelledby="steps-title">
+      <h2 id="steps-title" class="section-title text-center mb-4">Как сделать заказ</h2>
+      <div class="row g-4 text-center">
+        <div class="col-12 col-md-4">
+          <div class="step h-100 p-4">
+            <div class="step__num mx-auto mb-3">1</div>
+            <h3 class="h5">Выберите руку</h3>
+            <p class="text-body-secondary mb-0">Отфильтруйте каталог по назначению, стороне и цене.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="step h-100 p-4">
+            <div class="step__num mx-auto mb-3">2</div>
+            <h3 class="h5">Оставьте заявку</h3>
+            <p class="text-body-secondary mb-0">Укажите количество и способ доставки — итог посчитается сразу.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="step h-100 p-4">
+            <div class="step__num mx-auto mb-3">3</div>
+            <h3 class="h5">Побеждайте</h3>
+            <p class="text-body-secondary mb-0">Мы перезвоним, подтвердим заказ и доставим руку к турниру.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container my-5">
+      <div class="cta rounded-4 p-4 p-lg-5 text-white">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-8">
+            <h2 class="h3 fw-bold mb-2">Не знаете, какую руку выбрать?</h2>
+            <p class="mb-0 opacity-75">Оставьте заявку — подскажем модель под вашу технику и весовую категорию.</p>
+          </div>
+          <div class="col-12 col-lg-4 text-lg-end">
+            <button type="button" class="btn btn-light btn-lg px-4" data-bs-toggle="modal" data-bs-target="#orderModal">Получить консультацию</button>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer bg-dark text-white-50 pt-5 pb-4 mt-5">
@@ -232,6 +333,7 @@
           <ul class="list-unstyled small mb-0">
             <li class="mb-2"><a class="footer-link" href="catalog.html?category=sport">Для армрестлинга</a></li>
             <li class="mb-2"><a class="footer-link" href="catalog.html?category=daily">Для быта</a></li>
+            <li><a class="footer-link" href="contacts.html">Контакты</a></li>
           </ul>
         </div>
         <div class="col-12 col-lg-4">
@@ -254,7 +356,7 @@
   <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <form id="quickOrderForm" action="#" method="post">
+        <form id="quickOrderForm" class="needs-validation" action="#" method="post" novalidate>
           <div class="modal-header">
             <h2 class="modal-title fs-5" id="orderModalLabel">Быстрая заявка</h2>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
@@ -264,12 +366,14 @@
             <div class="mb-3">
               <label for="quick-name" class="form-label">Имя</label>
               <input id="quick-name" name="name" type="text" class="form-control" placeholder="Как к вам обращаться" minlength="2" autocomplete="given-name" required>
+              <div class="invalid-feedback">Введите имя (минимум 2 символа).</div>
             </div>
             <div class="mb-3">
               <label for="quick-phone" class="form-label">Телефон</label>
               <div class="input-group has-validation">
                 <span class="input-group-text">+7</span>
                 <input id="quick-phone" name="phone" type="tel" inputmode="numeric" class="form-control" placeholder="9001234567" pattern="[0-9]{10}" autocomplete="tel-national" required>
+                <div class="invalid-feedback">Введите 10 цифр номера без +7.</div>
               </div>
             </div>
             <div class="mb-3">
@@ -285,10 +389,12 @@
                 <option value="7" data-price="9000">Рука «Грация» — правая женская — 9 000 ₽</option>
                 <option value="8" data-price="8100">Рука «Грация» — левая женская — 8 100 ₽</option>
               </select>
+              <div class="invalid-feedback">Выберите товар.</div>
             </div>
             <div class="form-check">
               <input id="quick-agree" name="agreement" type="checkbox" class="form-check-input" required>
               <label for="quick-agree" class="form-check-label">Согласен на обработку персональных данных</label>
+              <div class="invalid-feedback">Без согласия заявку отправить нельзя.</div>
             </div>
           </div>
           <div class="modal-footer">
@@ -300,6 +406,19 @@
     </div>
   </div>
 
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="appToast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-header">
+        <img src="images/logo.png" class="rounded me-2" alt="" width="20" height="20">
+        <strong class="me-auto">Shop_ot_bob</strong>
+        <small>только что</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+      </div>
+      <div class="toast-body" id="appToastBody">Готово!</div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
